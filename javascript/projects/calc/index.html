@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <script src="calc.js" defer></script>
+</head>
+<body>
+    <div>
+        <input class="numone" id="num1" type="number">
+        <select class="select" id="op">
+                <option id="plus">+</option>
+                <option id="minus">-</option>
+                <option id="times">*</option>
+                <option id="divide">/</option>
+        </select>
+        <input class="numtwo" id="num2" type="number">
+
+        <button class="calc" id="equals" onclick=equals()>=</button>
+        <button class="reset" id="reset" onclick=reset()>C</button>
+
+        <p class="result" id="result"></p>
+    </div>
+</body>
+</html>
