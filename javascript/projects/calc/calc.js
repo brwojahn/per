@@ -2,6 +2,22 @@ let num1;
 let num2;
 let operator;
 
+let enter = document.addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        equals();
+    } else {
+        return;
+    }
+});
+
+let bck = document.addEventListener('keydown', function(event) {
+    if (event.key === "Backspace") {
+        reset();
+    } else {
+        return;
+    }
+});
+
 function equals() {
     num1 = parseInt(document.getElementById('num1').value);
     num2 = parseInt(document.getElementById('num2').value);
