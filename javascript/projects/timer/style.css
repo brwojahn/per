@@ -2,3 +2,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+body .main {
+    justify-content: center;
+    align-items: center;
+}
