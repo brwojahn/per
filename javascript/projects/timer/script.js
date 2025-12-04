@@ -1,8 +1,11 @@
 const time = document.getElementById('timer');
+const last_time = document.getElementById('last_time')
 let testTime = null;
 let startingTime = null;
 let running = false;
 let interval = null;
+let lastTime = null
+let ao5 = null
 
 document.addEventListener('keydown', function(event) {
   if (event.key === " " && !event.repeat && !running) {
@@ -10,6 +13,12 @@ document.addEventListener('keydown', function(event) {
     time.textContent = "00:00:00";
     time.style.color = "rgba(160, 0, 0, 1)"
     clearInterval(interval);
+  }
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === " " && event.repeat && running) {
+    update();
   }
 });
 
@@ -39,4 +48,6 @@ function update() {
   let secStr = String(seconds).padStart(2, "0");
   let msStr = String(milliseconds).padStart(2, "0");
   time.textContent = `${minStr}:${secStr}:${msStr}`;
+  lastTime = `${minStr}:${secStr}:${msStr}`;
+  last_time.textContent = `${lastTime}`;
 }
